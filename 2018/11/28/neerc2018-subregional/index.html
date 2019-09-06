@@ -43,7 +43,7 @@
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     },
-    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true},
     path: '',
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     translation: {
@@ -56,7 +56,7 @@
 </script>
 
   <meta name="description" content="NEERC Subregional 的一场，难度很迷（超级简单），单刷11/12。最后一题算法假了，体力还是布星啊到后面意识模糊了。 I, J, A, H, F难度相当于C语言练习题，这里不再赘述了。 Gym-101911C Bacteria题目传送门 题意：相同大小的两个细菌可以合并成一个大细菌，大小为原来两个之和。给你一堆细菌，不超过2e5个，求最少再添加多少个能最后合并成一个细菌，如果不可能">
-<meta name="keywords" content="题解,CF-GYM Virtual Participation">
+<meta name="keywords" content="CF-GYM Virtual Participation,题解">
 <meta property="og:type" content="article">
 <meta property="og:title" content="训练：2018-2019 ACM-ICPC, NEERC, Southern Subregional Contest, Qualification Stage">
 <meta property="og:url" content="http://yoursite.com/2018/11/28/neerc2018-subregional/index.html">
@@ -213,9 +213,36 @@
     <a href="/sitemap.xml" rel="section"><i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>Sitemap</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>Search</a>
+      </li>
+    
   </ul>
 
 </nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="Searching..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
 </div>
     </header>
 
@@ -298,6 +325,14 @@
           
 
           
+            <span class="post-meta-item" title="Views">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
 
         </div>
       </header>
@@ -352,9 +387,9 @@
           
           <div class="post-tags">
             
-              <a href="/tags/题解/" rel="tag"># 题解</a>
-            
               <a href="/tags/CF-GYM-Virtual-Participation/" rel="tag"># CF-GYM Virtual Participation</a>
+            
+              <a href="/tags/题解/" rel="tag"># 题解</a>
             
           </div>
         
@@ -373,10 +408,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2018/12/05/cf525div2/" rel="prev" title="训练：Codeforces Round">
-                  训练：Codeforces Round <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -443,7 +474,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -469,7 +500,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">tags</span>
         </a>
       </div>
@@ -536,6 +567,25 @@
   <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.4.0</div>
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="Total Visitors">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+    <span class="post-meta-divider">|</span>
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="Total Views">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
 
 
 
@@ -573,6 +623,8 @@
 
 
 
+
+  <script src="/js/local-search.js?v=7.4.0"></script>
 
 
 
